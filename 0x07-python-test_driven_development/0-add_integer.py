@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+"""
+Return addition of a and b
+>>> add_integer(2,3)
+5
+"""
 def add_integer(a, b=98):
-    """My addition function
-    Args:
-        a: first integer
-        b: second integer
-    Returns:
-        The return value. a + b
+    """
+    Args: a: first integer. b: second integer.
     """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
