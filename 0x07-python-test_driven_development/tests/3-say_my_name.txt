@@ -1,0 +1,23 @@
+The "3-say_my_name.py" module
+======================
+
+Using "say_my_name"
+-------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Normal cases:
+>>> say_my_name("Felipe","Serna")
+My name is Felipe Serna
+
+First name cases:
+>>> say_my_name("Bob")
+My name is Bob 
+
+Error cases:
+>>> say_my_name(3,4)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name("Felipe",4)
+Traceback (most recent call last):
+TypeError: last_name must be a string
