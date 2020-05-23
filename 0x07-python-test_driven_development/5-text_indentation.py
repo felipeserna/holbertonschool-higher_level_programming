@@ -13,7 +13,7 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    characters = [':','.','?']
+    characters = [':', '.', '?']
     start_of_line = True
 
     for i in text:

@@ -14,9 +14,9 @@ def matrix_divided(matrix, div):
     same_size = "Each row of the matrix must have the same size"
     int_float = "matrix must be a matrix (list of lists) of integers/floats"
 
-    if isinstance(matrix, list):
+    if isinstance(matrix, list) and matrix:
         for row in new_matrix:
-            if isinstance(row, list):
+            if isinstance(row, list) and row:
                 if len(new_matrix[0]) == len(row):
                     for col in row:
                         if type(col) in [int, float]:
@@ -34,4 +34,4 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return [[round(i/div,2) for i in row] for row in new_matrix[:]]
+    return [[round(i/div, 2) for i in row] for row in new_matrix[:]]
