@@ -76,5 +76,5 @@ class Rectangle:
         return a
 
     def __del__(self):
-        """Delete an instance of rectangle"""
+        """Delete an instance of Rectangle"""
         print("Bye rectangle...")
