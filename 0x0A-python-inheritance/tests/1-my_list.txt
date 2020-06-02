@@ -51,6 +51,13 @@ Normal cases:
 >>> my_list.print_sorted()
 [3.545]
 
+>>> my_list = MyList()
+>>> my_list.append('A')
+>>> my_list.append('B')
+>>> my_list.append('C')
+>>> my_list.print_sorted()
+['A', 'B', 'C']
+
 Error cases:
 
 >>> my_list = MyList()
