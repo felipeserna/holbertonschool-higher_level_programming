@@ -80,3 +80,10 @@ TypeError: list() takes at most 1 argument (2 given)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'NoneType' object is not iterable
+
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append("B")
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: unorderable types: str() < int()
