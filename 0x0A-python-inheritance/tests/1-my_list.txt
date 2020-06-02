@@ -75,3 +75,8 @@ NameError: name 'A' is not defined
 >>> my_list = MyList(2, 3)
 Traceback (most recent call last):
 TypeError: list() takes at most 1 argument (2 given)
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not iterable
