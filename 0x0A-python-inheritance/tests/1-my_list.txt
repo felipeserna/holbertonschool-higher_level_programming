@@ -64,3 +64,7 @@ TypeError: unorderable types: int() < complex()
 >>> my_list.append(A)
 Traceback (most recent call last):
 NameError: name 'A' is not defined
+
+>>> my_list = MyList(2, 3)
+Traceback (most recent call last):
+TypeError: list() takes at most 1 argument (2 given)
