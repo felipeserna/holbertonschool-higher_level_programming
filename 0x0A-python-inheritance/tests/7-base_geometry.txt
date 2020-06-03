@@ -13,6 +13,14 @@ Normal cases:
 >>> bg.integer_validator("width", 89)
 >>>
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(3, 4)
+>>>
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator([1, 2, 3], 4)
+>>>
+
 Error cases:
 
 >>> bg = BaseGeometry()
@@ -39,3 +47,8 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator("felipe", 3.45)
 Traceback (most recent call last):
 TypeError: felipe must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
