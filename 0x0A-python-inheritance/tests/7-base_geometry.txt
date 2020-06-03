@@ -29,3 +29,13 @@ ValueError: age must be greater than 0
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(12)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("felipe", 3.45)
+Traceback (most recent call last):
+TypeError: felipe must be an integer
