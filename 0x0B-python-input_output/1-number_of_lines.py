@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""Number of lines"""
+"""This module contains a function called number_of_lines"""
 
 
 def number_of_lines(filename=""):
-    """returns the number of lines of a text file
-    Args: filename: string
+    """number_of_lines function that find the number if lines in a file
+    Args:
+        filename (str, optional): file name string. Defaults to "".
+    Returns:
+        [int]: number of lines in the file
     """
-    with open("my_file_0.txt", mode='r', encoding='utf-8') as my_file:
-        number_of_lines = 0
-        for line in my_file:
-            number_of_lines += 1
-        return (number_of_lines)
+    with open("{}".format(filename), encoding='utf-8') as a_file:
+        lines = 0
+        for a_line in a_file:
+            lines += 1
+        return lines
