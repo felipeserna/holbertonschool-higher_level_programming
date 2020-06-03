@@ -21,6 +21,10 @@ Normal cases:
 >>> bg.integer_validator([1, 2, 3], 4)
 >>>
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("", 4)
+>>>
+
 Error cases:
 
 >>> bg = BaseGeometry()
