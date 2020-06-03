@@ -98,10 +98,6 @@ Normal cases:
 >>> my_list.print_sorted()
 [2, 7, 19]
 
->>> my_list = MyList()
->>> my_list.print_sorted()
-[]
-
 Error cases:
 
 >>> my_list = MyList()
