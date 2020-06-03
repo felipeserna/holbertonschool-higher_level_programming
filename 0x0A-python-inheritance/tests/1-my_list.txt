@@ -67,18 +67,6 @@ Normal cases:
 >>> print(my_list)
 [3.4, 5, 7, 1, 9]
 
->>> my_list = MyList()
->>> my_list.append(3)
->>> my_list.append(4)
->>> my_list.append(5)
->>> my_list.append(6)
->>> my_list.print_sorted()
-[3, 4, 5, 6]
-
->>> my_list.reverse()
->>> print(my_list)
-[6, 5, 4, 3]
-
 Error cases:
 
 >>> my_list = MyList()
