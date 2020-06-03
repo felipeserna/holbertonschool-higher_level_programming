@@ -93,11 +93,6 @@ Normal cases:
 >>> print(my_list)
 [2, 19, 7, 6]
 
->>> my_list.pop()
-6
->>> my_list.print_sorted()
-[2, 7, 19]
-
 Error cases:
 
 >>> my_list = MyList()
