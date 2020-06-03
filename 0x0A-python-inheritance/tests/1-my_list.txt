@@ -102,10 +102,6 @@ Normal cases:
 >>> my_list.print_sorted()
 []
 
->>> my_list.append("E")
->>> my_list.print_sorted()
-['E']
-
 Error cases:
 
 >>> my_list = MyList()
