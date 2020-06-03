@@ -81,3 +81,8 @@ TypeError: prueba must be an integer
 >>> bg.integer_validator("prueba", None)
 Traceback (most recent call last):
 TypeError: prueba must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("prueba", True)
+Traceback (most recent call last):
+TypeError: prueba must be an integer
