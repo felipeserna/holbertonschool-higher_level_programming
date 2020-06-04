@@ -30,6 +30,5 @@ class Student:
         """
         replaces all attributes of the Student instance
         """
-        if json is dict:
-            for a_key, a_value in json.items():
-                self.__dic__[a_key] = a_value
+        for a_key, a_value in json.items():
+            self.__dic__[a_key] = a_value
