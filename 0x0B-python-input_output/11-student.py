@@ -9,9 +9,9 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-        def to_json(self):
-            """
-            Retrieves a dictionary representation of a
-            Student instance (same as 10-class_to_json.py)
-            """
-            return (self.__dict__)
+    def to_json(self):
+        """
+        Retrieves a dictionary representation of a
+        Student instance (same as 10-class_to_json.py)
+        """
+        return (self.__dict__)
