@@ -69,19 +69,22 @@ Normal cases:
 
 Check print_sorted() returns a new list:
 
->>> my_list = MyList()
->>> my_list.append(1)
+>>> my_list.clear()
+>>> my_list.append(6)
+>>> my_list.append(7)
+>>> my_list.append(19)
 >>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(4)
->>> my_list.append(5)
 >>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+[2, 6, 7, 19]
+
+>>> my_list.reverse()
+>>> print(my_list)
+[2, 19, 7, 6]
 
 >>> my_list.pop()
-5
+6
 >>> my_list.print_sorted()
-[1, 2, 3, 4]
+[2, 7, 19]
 
 Error cases:
 
