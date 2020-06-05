@@ -69,7 +69,7 @@ Normal cases:
 
 QA Review correction: Check print_sorted() returns a new list:
 
->>> my_list.clear()
+>>> my_list = MyList()
 >>> my_list.append(6)
 >>> my_list.append(7)
 >>> my_list.append(19)
