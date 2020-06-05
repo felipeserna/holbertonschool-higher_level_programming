@@ -67,7 +67,7 @@ Normal cases:
 >>> print(my_list)
 [3.4, 5, 7, 1, 9]
 
-Check print_sorted() returns a new list:
+QA Review correction: Check print_sorted() returns a new list:
 
 >>> my_list.clear()
 >>> my_list.append(6)
