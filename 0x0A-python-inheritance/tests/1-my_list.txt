@@ -77,6 +77,7 @@ Check print_sorted() returns a new list:
 >>> my_list.append(5)
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
+
 >>> my_list.pop()
 5
 >>> my_list.print_sorted()
