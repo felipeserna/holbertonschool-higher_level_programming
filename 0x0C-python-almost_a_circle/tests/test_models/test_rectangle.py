@@ -4,6 +4,8 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+import sys
+from io import StringIO
 
 
 class TestRectangle(unittest.TestCase):
@@ -13,12 +15,17 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         """set the start point"""
         self.rectangle = Rectangle(2, 2, 2, 2, 3)
+        sys.stdout = StringIO()
+
+    def tearDown(self):
+        """clean everything up after running setup"""
+        sys.stdout = sys.__stdout__
 
     def test_03(self):
         """test for task 3"""
         self.assertEqual(self.rectangle.width, 2)
         self.assertEqual(self.rectangle.height, 2)
-        self.assertEqual(self.rectangle.height, 2)
+        self.assertEqual(self.rectangle.id, 3)
 
         r0 = Rectangle(10, 2, 3, 0, 4)
         self.assertEqual(r0.x, 3)
@@ -38,6 +45,34 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 0, 3, 1, 1)
         self.assertRaises(ValueError, Rectangle, 5, 3, 1, -1)
 
+    def test_04(self):
+        """test for task 4"""
+        self.assertEqual(self.rectangle.area(), 4)
+
+        r1 = Rectangle(2, 4, 0, 0, 1)
+        self.assertEqual(r1.area(), 8)
+
+    def test_05(self):
+        """test for task 5"""
+        r4 = Rectangle(2, 2)
+        str_r4 = '##\n' \
+                 '##\n'
+
+        try:
+            r4.display()
+            self.assertEqual(sys.stdout.getvalue(), str_r4)
+        finally:
+            sys.stdout.seek(0)
+            sys.stdout.truncate(0)
+
+    def test_06(self):
+        """test for task 6"""
+        self.assertEqual(self.rectangle.__str__(),
+                         "[Rectangle] (3) 2/2 - 2/2")
+        r2 = Rectangle(3, 4, 5, 6, 7)
+        self.assertEqual(r2.__str__(), "[Rectangle] (7) 5/6 - 3/4")
+        r3 = Rectangle(8, 9)
+        self.assertEqual(r3.__str__(), "[Rectangle] (4) 0/0 - 8/9")
 
 if __name__ == '__main__':
     unittest.main()
