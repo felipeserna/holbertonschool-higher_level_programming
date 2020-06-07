@@ -93,8 +93,17 @@ class Rectangle(Base):
                 format(self.id, self.__x, self.__y,
                        self.__width, self.__height))
 
-    def update(self, *args):
-        """assigns an argument to each attribute"""
-        attributes = ['id', 'width', 'height', 'x', 'y']
-        for count, item in enumerate(args):
-            setattr(self, attributes[count], item)
+    def update(self, *args, **kwargs):
+        """*args: assigns an argument to each attribute
+        **kwargs: assigns a key/value argument to attributes
+        """
+        if args:
+
+            attributes = ['id', 'width', 'height', 'x', 'y']
+            for count, item in enumerate(args):
+                if count < 5:
+                    setattr(self, attributes[count], item)
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
