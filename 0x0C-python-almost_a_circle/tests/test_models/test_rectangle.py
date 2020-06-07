@@ -72,7 +72,7 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(3, 4, 5, 6, 7)
         self.assertEqual(r2.__str__(), "[Rectangle] (7) 5/6 - 3/4")
         r3 = Rectangle(8, 9)
-        self.assertEqual(r3.__str__(), "[Rectangle] (2) 0/0 - 8/9")
+        self.assertEqual(r3.__str__(), "[Rectangle] (4) 0/0 - 8/9")
 
     def test_07(self):
         """test for task 7"""
@@ -92,6 +92,12 @@ class TestRectangle(unittest.TestCase):
         r6 = Rectangle(1, 2, 3, 4, 5)
         r6.update(6, 7, 8, 9, 0)
         self.assertEqual(r6.__str__(), "[Rectangle] (6) 9/0 - 7/8")
+
+    def test_09(self):
+        """test for task 9"""
+        r7 = Rectangle(3, 1, 9, 5, 3)
+        r7.update(height=4, y=4, x=4, id=4, width=4)
+        self.assertEqual(r7.__str__(), "[Rectangle] (4) 4/4 - 4/4")
 
 
 if __name__ == '__main__':
