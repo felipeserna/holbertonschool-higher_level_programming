@@ -13,7 +13,7 @@ class TestSquare(unittest.TestCase):
     """
     def setUp(self):
         """set the start point"""
-        self.square = Square(2, 2, 2, 2, 3)
+        self.square = Square(2, 2, 3, 4, 5)
         sys.stdout = StringIO()
 
 
