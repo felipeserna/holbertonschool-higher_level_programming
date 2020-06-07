@@ -74,5 +74,19 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(8, 9)
         self.assertEqual(r3.__str__(), "[Rectangle] (4) 0/0 - 8/9")
 
+    def test_07(self):
+        """test for task 7"""
+        r5 = Rectangle(2, 2, 2, 2, 8)
+        str_r5 = '\n\n  ##\n  ##\n'
+
+
+        try:
+            r5.display()
+            self.assertEqual(sys.stdout.getvalue(), str_r5)
+        finally:
+            sys.stdout.seek(0)
+            sys.stdout.truncate(0)
+
+
 if __name__ == '__main__':
     unittest.main()
