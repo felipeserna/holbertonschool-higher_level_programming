@@ -16,3 +16,29 @@ class Square(Rectangle):
         return ("[Square] ({:d}) {:d}/{:d} - {:d}".
                 format(self.id, self.x, self.y,
                        self.width))
+
+    @property
+    def size(self):
+        """retrieves the size"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """sets the size"""
+        self.width = value
+        self.height = value
+
+    def update(self, *args, **kwargs):
+        """*args: assigns an argument to each attribute
+        **kwargs: assigns a key/value argument to attributes
+        """
+        if args:
+
+            attributes = ['id', 'size', 'x', 'y']
+            for count, item in enumerate(args):
+                if count < 4:
+                    setattr(self, attributes[count], item)
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
