@@ -79,7 +79,6 @@ class TestRectangle(unittest.TestCase):
         r5 = Rectangle(2, 2, 2, 2, 8)
         str_r5 = '\n\n  ##\n  ##\n'
 
-
         try:
             r5.display()
             self.assertEqual(sys.stdout.getvalue(), str_r5)

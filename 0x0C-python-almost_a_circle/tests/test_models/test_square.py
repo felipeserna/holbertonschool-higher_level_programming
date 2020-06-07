@@ -2,8 +2,6 @@
 """Unittest for Almost a circle
 """
 import unittest
-from models.base import Base
-from models.rectangle import Rectangle
 from models.square import Square
 import sys
 from io import StringIO
