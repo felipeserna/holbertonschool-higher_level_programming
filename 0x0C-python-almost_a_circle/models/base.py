@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """Base class"""
-
+import json
 
 class Base():
     """first class base"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """class constructor
         Args:
@@ -15,3 +16,17 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries
+        Args: list_dictionaries: list of dictionaries
+        If list_dictionaries is None or empty, return the string: "[]"
+        Otherwise, return the JSON string representation
+        of list_dictionaries"""
+
+        if list_dictionaries is None or list_dictionaries == []:
+            return ("[]")
+
+        else:
+            return (json.dumps(list_dictionaries))
