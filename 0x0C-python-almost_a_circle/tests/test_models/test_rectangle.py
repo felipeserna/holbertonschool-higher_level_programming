@@ -71,8 +71,8 @@ class TestRectangle(unittest.TestCase):
                          "[Rectangle] (3) 2/2 - 2/2")
         r2 = Rectangle(3, 4, 5, 6, 7)
         self.assertEqual(r2.__str__(), "[Rectangle] (7) 5/6 - 3/4")
-        r3 = Rectangle(8, 9)
-        self.assertEqual(r3.__str__(), "[Rectangle] (2) 0/0 - 8/9")
+        r3 = Rectangle(8, 9, 3, 3, 3)
+        self.assertEqual(r3.__str__(), "[Rectangle] (3) 3/3 - 8/9")
 
     def test_07(self):
         """test for task 7"""
