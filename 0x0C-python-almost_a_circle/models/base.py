@@ -86,18 +86,3 @@ class Base():
                 return (list_of_ins)
         except:
             return ([])
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        """serializes in CSV"""
-        with open(cls.__name__ + ".csv", 'w') as my_file:
-            if list_objs is None:
-                csv.writer([], my_file)
-
-            else:
-                list_of_dict = []
-                for dictionary in list_objs:
-                    list_of_dict.append(dictionary.to_dictionary())
-                csv_list_objs = Base.to_j_string---(list_of_dict)
-                my_file.writer(csv_list_objs)
-                return (my_file)
