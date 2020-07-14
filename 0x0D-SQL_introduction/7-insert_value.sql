@@ -6,6 +6,6 @@ INSERT INTO `first_table` (
 )
 VALUES
 	(
-	98,
+	"89",
 	"Holberton School"
 );
