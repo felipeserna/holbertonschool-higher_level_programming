@@ -8,4 +8,4 @@
 SELECT id, name
 FROM cities
 WHERE state_id = 1
-GROUP BY cities.id;
+GROUP BY id;
