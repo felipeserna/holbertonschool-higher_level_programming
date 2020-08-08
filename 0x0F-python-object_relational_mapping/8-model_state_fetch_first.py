@@ -21,7 +21,11 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
+
     first_row = session.query(State).first()
+
+    if first_row is None:
+        print("Nothing")
     print("{}: {}".format(first_row.id, first_row.name))
 
     session.close()
