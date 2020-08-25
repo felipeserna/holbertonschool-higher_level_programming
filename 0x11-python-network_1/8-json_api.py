@@ -1,24 +1,19 @@
 #!/usr/bin/python3
-"""
-Script that takes in a letter and sends a POST request
-to http://0.0.0.0:5000/search_user with the letter as a parameter.
-"""
-
+"""Script that takes URL and a email, sends POST reques tto the URL"""
 
 import requests
-import sys
-
+from sys import argv
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
+    if len(argv) == 1:
         q = ""
     else:
-        q = sys.argv[1]
+        q = argv[1]
 
-    reponse = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
+    res = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
 
     try:
-        data = response.json()
+        data = res.json()
         if data:
             print("[{}] {}".format(data["id"], data["name"]))
         else:
